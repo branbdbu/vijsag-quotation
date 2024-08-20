@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIJSAG SOLUTION</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/mobile.css">
+</head>
+
+<body>
+    <!-- <h1>Vijsag Rental Quotation</h1> -->
+    <div class="container">
+        <form action="" method="post" id="quotationForm">
+            <!-- <h1>Quotation Maker</h1> -->
+            <div class="form-group">
+                <label for="itemName">Item Name:</label>
+
+                <!-- <input type="text" id="itemName" value="fridge" name="itemName" required> -->
+                <input type="text" id="itemName" name="itemName" list="itemList" required>
+                <datalist id="itemList">
+                    <option value="Metal sinle bed 3/6">
+                    <option value="metal heavy bed 3/6">
+                    <option value="metal heavy bed 4/6">
+                    <option value="metal heavy bed 5/6">
+                    <option value="Wooden single bed 3/6">
+                    <option value="Wooden single bed 4/6">
+                    <option value="Wooden single bed 5/6">
+                    <option value="Wooden single bed 5/6">
+                    <option value=" wooden single bed without storage 5/6">
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price per Item:</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <button type="button" onclick="addItem()">Add Item</button>
+        </form>
+        <script src="/script/script.js"></script>
+        <div id="container" class="image-containerl">
+            <img id="img" src="/images/logo.jpeg" alt="">
+        </div>
+        <div class="section">
+            <h3>Client Details</h3>
+            <div class="form-group">
+                <label for="client-name">client-name:</label>
+
+                <input type="text" id="client-name" name="client-name" required>
+            </div>
+            <div class="form-group">
+                <label for="Tenure">mobile number:</label>
+                <input type="number" id="Tenure" name="Tenure" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+        </div>
+        <div class="section">
+            <h3>Additional Details</h3>
+
+            <div class="form-group">
+                <label for="tenure">Tenure:</label>
+
+                <input type="text" id="tenure" name="tenure" required>
+            </div>
+            <div class="form-group">
+                <label for="createdBy">Created By:</label>
+                <input type="text" id="createdBy" name="createdBy" required>
+            </div>
+        </div>
+        <table id="quotationTable">
+            <h2>Quotation</h2>
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Price per Item</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="total-cost">
+            <strong>Total rent per month: ₹<span id="totalCost">0.00</span></strong>
+            <p id="grandTotalDisplay">00</p>
+        </div>
+
+        <div class="">
+            <br>
+            <div class="form-group">
+                <label for="deliveryCharges">Delivery Charges:</label>
+                <input type="number" id="deliveryCharges" name="deliveryCharges" required>
+            </div>
+            <div class="form-group">
+                <label for="withoutliftd">Without Lift Charges :</label>
+                <input type="number" id="withoutliftd" name="withoutliftd" required>
+            </div>
+            <div class="form-group">
+                <label for="installation">Installation Charges:</label>
+                <input type="number" id="installation" name="installation" required>
+            </div>
+        </div>
+        <div class="">
+            <br>
+            <div class="form-group">
+                <label for="pickupCharges">Pickup Charges:</label>
+                <input type="number" id="pickupCharges" name="pickupCharges" required>
+            </div>
+            <div class="form-group">
+                <label for="withoutliftp">Without Lift Charges (Pickup):</label>
+                <input type="number" id="withoutliftp" name="withoutliftp" required>
+            </div>
+        </div>
+        <div class="total-cost">
+            <div class="totalC">
+                Dilevery+loading+instalation<strong> Total Amount: <span id="totalC">0.00</span></strong>
+                <script src="script/sc.js"></script>
+            </div>
+        </div>
+        <h4 id="note">*Note:-pick up charges pay at pick up time <br>
+            *Distance charges can be extra if delivery vehicle will get parked away from lift / stairs area</h4>
+        <style>
+            .button-container {
+                display: flex;
+                gap: 20px;
+            }
+
+            .button-container button {
+                padding: 0;
+                border: none;
+                cursor: pointer;
+                background: none;
+                outline: none;
+            }
+
+            .button-container img {
+                width: 150px;
+                height: auto;
+                transition: border 0.3s;
+            }
+
+            .button-container img:hover {
+                border: 2px solid blue;
+            }
+
+            .selected-image-container {
+                margin-top: 20px;
+            }
+
+            .selected-image-container img {
+                width: 300px;
+                height: auto;
+                border: 2px solid green;
+            }
+        </style>
+        </head>
+
+        <body>
+            <style>
+
+            </style>
+            <button id="button1">VS</button>
+            <button id="button2">Vijsag</button>
+            <div id="container1" class="image-container">
+                <h1> Note : please do not make payment on any mobile number Please pay through UPI ID or QR only 🙏🏻
+                </h1>
+                <img id="image1" src="/images/vs.jpg" alt="Image 1">
+                <h3>V.S.FURNITURE & CO.
+                </h3>
+                Note : upi Id - <a href="">Sagarhotwani@paytm </a>
+                <div class="doc">
+                    <h1>BANK DETAILS: </h1>
+                    <h3>Company Name: V.S.FURNITURE & CO. </h3>
+                    <h3>Account number: 37723565988 IFSC CODE: SBIN0018880 </h3>
+                    <h1>Documents and details required for furniture rental agreement </h1>
+                    <h3>Aadhar card</h3>
+                    <h3>Pan card / passport</h3>
+                    <h3>Company id / joining letter </h3>
+                    <h3>Flat rent agreement </h3>
+                    <h3>Client mail id </h3>
+                    <h3>alternative contact number ( family or friends)</h3>
+                    <h3>Flat Owner contact number</h3>
+                </div>
+            </div>
+       
+            <div id="container2" class="image-container">
+                <img id="image2" src="/images/vijsag.jpeg" alt="Image 2">
+                <h3>VIJSAG SOLUTIONS PVT LTD
+                </h3>
+                Note : upi Id - <a href="">vijsagsolutionspvt.ltd@icici </a>
+                <div class="doc">
+                    <h1>BANK DETAILS: </h1>
+                    <h3>Company Name: VIJSAG SOLUTIONS PVT LTD </h3>
+                    <h3>Account number: 385005001616 IFSC CODE: ICIC0003850 </h3>
+                    <h1>Documents and details required for furniture rental agreement </h1>
+                    <h3>Aadhar card</h3>
+                    <h3>Pan card / passport</h3>
+                    <h3>Company id / joining letter </h3>
+                    <h3>Flat rent agreement </h3>
+                    <h3>Client mail id </h3>
+                    <h3>alternative contact number ( family or friends)</h3>
+                    <h3>Flat Owner contact number</h3>
+                </div>
+            </div>
+            <script>
+                document.getElementById("button1").onclick = function () {
+                    document.getElementById("button1").style.display = "none";
+                    document.getElementById("button2").style.display = "none";
+                    document.getElementById("container1").style.display = "block";
+                };
+                 document.getElementById("button2").onclick = function () {
+                    document.getElementById("button1").style.display = "none";
+                    document.getElementById("button2").style.display = "none";
+                    document.getElementById("container2").style.display = "block";
+                }; 
+            </script> 
+        </body>
+
+</html>
+<button onclick="printQuotation()" class="print-button">Print Quotation</button>
+</div>
+</body>
+
+</html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+

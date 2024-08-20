@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.total-cost {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.print-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.print-button:hover {
+    background-color: #218838;
+}
+.charges {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.charges .form-group {
+    width: 48%;
+}
+
+.total-cost {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+#img{
+        /* margin-left: 124px; */
+        margin: auto;
+        align-items: center;
+        display: block
+}
+.hidden {
+    display: none;
+}
+#imageOptions{
+    align-items: center;
+}
+      /* Centering the container */
+      .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* height: 10vh; */
+    }
+
+    /* Centering the image */
+    #selectedImage {
+        width: 300px;
+        height: auto;
+        margin-bottom: 20px; /* Adds space between the image and buttons */
+    }
+
+    /* Centering the buttons */
+    #imageOptions {
+        display: flex;
+        gap: 10px; /* Adds space between the buttons */
+    }
+    #note{
+        padding: 20px;
+    }
+
+
+
+    .con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* height: 100vh; Full viewport height */
+        margin: 0;
+    }
+    .image-container {
+        display: none;
+        /* Initially hide images and descriptions */
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .image-container img {
+        width: 383px;
+        /* Set the width of the images */
+    }
+
+    button {
+        margin: 5px;
+    }
+
+    .doc {
+        text-align: left;
+  }
+  .image-containerl {
+    /* display: none; */
+    /* Initially hide images and descriptions */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-containerl img {
+    width: 383px;
+    /* Set the width of the images */
+}
+    /* Hidden class */
+
+/* print.css */
+@media print {
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #quotationForm {
+        display: none;
+    }
+    .print-button {
+        display: none;
+    }
+    .summary {
+        margin-top: 20px;
+    }
+    #quotationTable {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    #quotationTable th, #quotationTable td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    #quotationTable th {
+        background-color: #f2f2f2;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
